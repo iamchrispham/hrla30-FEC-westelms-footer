@@ -1,0 +1,19 @@
+h3 {
+    margin: 0 0 10px;
+    font-family: "GT-Eesti 5r",Arial,sans-serif;
+    font-weight: normal;
+    font-size: 17.719px;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+    color: #363636;
+    text-transform: capitalize;
+}
+
+#footer-container
+link .footer-link__title-link {
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    color: #363636;
+    text-decoration: none;
+    cursor: pointer;
+}
