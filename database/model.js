@@ -3,11 +3,6 @@ const Sequelize = require('sequelize');
 
 
 const Chairs = connection.define('chairs', {
-	id: {
-		type: Sequelize.INTEGER,
-		primaryKey: true,
-		allowNull: false
-	},
 	name: {
 		type: Sequelize.STRING,
 		required: true,
