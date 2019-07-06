@@ -4,6 +4,15 @@ getChairs = () => {
     return Models.Chairs.findAll({});
 }
 
+getChairByID = (id) => {
+    return Models.Chairs.findAll({
+        where: {
+            id: id
+        }
+    });
+}
+
 module.exports = {
-    getChairs
+    getChairs,
+    getChairByID
 }
