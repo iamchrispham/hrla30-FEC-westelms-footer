@@ -1,8 +1,8 @@
 // var mysql = require('mysql');
-var mypw = require('../mypw.js');
+var Credentials = require('../credentials.js');
 const Sequelize = require('sequelize');
-const connection = new Sequelize('fecwestelms', 'admin', mypw, {
-    host : 'admin.cmd4su8z0tlg.us-west-1.rds.amazonaws.com',
+const connection = new Sequelize('fecwestelms', 'admin', Credentials.mypw, {
+    host : Credentials.host,
     port: '3306',
     dialect : 'mysql'
 });
@@ -13,6 +13,8 @@ connection
     .catch( (err) => console.error('Not connected to the database', err));
 
 module.exports = connection;
+
+// RAW SQL
 // var connection = mysql.createConnection({
 //   host     : 'admin.cmd4su8z0tlg.us-west-1.rds.amazonaws.com',
 //   user     : 'admin',
