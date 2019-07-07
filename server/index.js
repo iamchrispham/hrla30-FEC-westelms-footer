@@ -26,8 +26,8 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 // console.log(`***ROW ${i}*** `, row['dataValues']['url']); to reference a property in a row of data
 app.get('/products-cp/', (req, res) => {
 	db.getChairs()
-		.then((data) => {
-			res.status(200).send(JSON.stringify(data)); // works, but fewer lines of code just stringifying the data.  higher level fct.
+		.then((records) => {
+			res.status(200).send(JSON.stringify(records)); // works, but fewer lines of code just stringifying the data.  higher level fct.
 		})
 		.catch( (err) => {
 			console.error(err);
@@ -40,8 +40,8 @@ app.get('/products-cp/:id', (req, res) => { // grab by ID
 	console.log(`/products-cp/${id}`, JSON.stringify(id));
 	db.getChairByID(id)
 		.then((data) => {
-			console.log('GET BY ID: ', data)
-			res.status(200).send(JSON.stringify(data));
+			var record = JSON.stringify(data);
+			res.status(200).send(record);
 		})
 	.catch( (err) => {
 		console.error(err);
