@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const morgan = require('morgan');
 const parser = require('body-parser');
@@ -12,7 +13,7 @@ const port = 3000;
 app.use(parser.json());
 app.use(parser.urlencoded({extended: true}));
 app.use(morgan('dev'));
-
+app.use(express.static(path.join(__dirname, '../client/dist')));
 /* ROW DATA
 [ 'dataValues',
   '_previousDataValues',

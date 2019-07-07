@@ -9,15 +9,18 @@ module.exports = {
 		path: dist_dir
 	},
 	module: {
-		rules: {
-			test: /\.jsx?/,
-			include: src_dir,
-			use: {
-				loader: 'babel-loader',
-				options: {
-					presets: ['react', 'env']
-				}
-			},
-		},
+		rules: [
+			{
+				test: /\.jsx?/,
+				include: src_dir,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-react', '@babel/preset-env']
+					}
+				},
+			}
+		],
 	}
 }
