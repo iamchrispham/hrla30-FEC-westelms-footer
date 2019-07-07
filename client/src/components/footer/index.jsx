@@ -1,23 +1,19 @@
 import React from 'react';
-import { render } from 'react-dom';
-import Subfooter from './subfooter.jsx';
+import Footer from './footer.jsx';
 
-class Footer extends React.Component {
+class FooterContainer extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 		}
 	}
-
 	render() {
 		return (
 			<div id="footer-container">
-				--- Footer Begin --- 
-				<Subfooter />
-				--- Footer End ---
+				<Footer />
 			</div>
 		)
 	}
 }
 
-export default Footer;
+export default FooterContainer;

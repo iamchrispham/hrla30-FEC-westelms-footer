@@ -172,7 +172,14 @@ class FooterLinkList extends React.Component {
               url: 'http://www.test.com/'
             },
           ]
-        }
+        },
+        { // col 4
+          column_id: 4,
+          category: `Sign Up For Sale + New Arrivals`,
+          sublinks: [
+          ]
+        },
+
       ]
     }
     this.mapLinks = this.mapLinks.bind(this);
@@ -184,12 +191,14 @@ class FooterLinkList extends React.Component {
       return this.state.links.map((list, key) => {
         var { category, column_id, sublinks } = list
         return (
-          <div className={`footer-column-${column_id}`}>
-            <strong>{
-              category // temp styling
-            }
-            </strong>
-            <FooterLinks column_id={column_id} category={category} sublinks={sublinks} key={key} />
+          <div className={`footer-column ${column_id}`}>
+            <ul>
+              <li className="footer-header">{
+                category // Category Title
+              }
+              </li>
+              <FooterLinks column_id={column_id} category={category} sublinks={sublinks} key={key} />
+            </ul>
           </div>
         )
       })
@@ -198,14 +207,10 @@ class FooterLinkList extends React.Component {
 
   render() {
     return (
-      <div className="footer-link-list" id="footer-link-list">
-        -----Footer Links Begin-----
+      <div className="footer-link-container" id="footer-link-container">
         {
           this.state.links ? this.mapLinks() : null // consider how to render links dynamically
-
-
-        }<br></br>
-        -----Footer Links End-----
+        }
       </div>
     )
   }

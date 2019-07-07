@@ -1,6 +1,25 @@
-.productContainer 
+html, body, div, span, applet, object, iframe, h1, 
+h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, 
+address, big, cite, code, del, dfn, em, img, ins, kbd, 
+q, s, samp, small, strike, strong, sub, sup, tt, var, b, 
+u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, 
+legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, embed, figure, figcaption, footer, 
+header, hgroup, menu, nav, output, ruby, section, summary, 
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+}
+
+#productContainer .section-header {
+    background-color: #000000;
+}
+
 .section-header h2 {
-    font-family: "GT-Eesti 5r",Arial,sans-serif;
+    font-family: "GT-Eesti 5r", Arial, sans-serif;
     font-size: 17.7px;
     font-weight: 500;
     line-height: 26px;
@@ -10,22 +29,61 @@
     margin: 0 0 10px
 }
 
-h3 {
+#footer-container {
+    background: #f8f8f8;
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+}
+
+#footer-container .footer {
+    width: 960px;
+    clear: both;
+    padding: 0;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#footer-container .subfooter {
+    margin-top: 20px;
+    width: 960px;
+    display: inline-block;
+}
+
+#footer-container ul {
+    color: #d9d9d9;
+    margin: 0;
+    display: block;
+    clear: both;
+}
+
+#footer-container ul li h3, #footer-container ul li h3 a {
+    font-size: 12.444px;
+}
+
+#footer-container .footer-column {
+    width: 235px;
+    float: left;
+}
+
+#footer-container .hover-it {
+    padding-bottom: 30px;
+}
+
+ol, ul {
+    list-style: none;
+    list-style-type: none;
+    list-style-position: initial;
+    list-style-image: initial;
+}
+
+h3, .h3 {
     margin: 0 0 10px;
-    font-family: "GT-Eesti 5r",Arial,sans-serif;
+    font-family: "GT-Eesti 5r", Arial, sans-serif;
     font-weight: normal;
     font-size: 17.719px;
     line-height: 32px;
     letter-spacing: 0.8px;
     color: #363636;
     text-transform: capitalize;
-}
-
-#footer-container
-link .footer-link__title-link {
-    padding-bottom: 2px;
-    border-bottom: 1px solid transparent;
-    color: #363636;
-    text-decoration: none;
-    cursor: pointer;
 }
