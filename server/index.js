@@ -5,10 +5,8 @@ const morgan = require('morgan');
 const parser = require('body-parser');
 const connection = require('../database');
 const db = require('../database/dbHelpers');
+const port = 3001;
 
-const port = 3000;
-// const scraper = require('../scraped-imgs/index.js');
-// https://storage.cloud.google.com/afucktonofchairs/scraped-imgs/1553529613-westelm-paidge-chair-and-a-half-sleeper-1553529608.jpg
 
 app.use(parser.json());
 app.use(parser.urlencoded({extended: true}));

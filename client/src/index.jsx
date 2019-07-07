@@ -1,5 +1,5 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Footer from './components/footer/footer.jsx';
+import App from './app.jsx';
 
-render(<Footer />, document.getElementById('footer'));
+render(<App />, document.getElementById('app'));
