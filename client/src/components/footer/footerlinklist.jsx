@@ -86,7 +86,7 @@ class FooterLinkList extends React.Component {
               url: 'http://www.test.com/'
             },
           ]
-        }, 
+        },
         { // col 2
           column_id: 2,
           category: `Our Cards + Rewards`,
@@ -112,7 +112,7 @@ class FooterLinkList extends React.Component {
               url: 'http://www.test.com/'
             },
           ]
-        }, 
+        },
         {
           column_id: 2,
           category: `Catalog`,
@@ -154,8 +154,7 @@ class FooterLinkList extends React.Component {
           category: `Your Local Store`,
           sublinks: [
             {
-              // name: ['3333 Bear St', 'Space 231', 'Costa Mesa CA 92626'],
-              name: '3333 Bear St, Space 231, Costa Mesa, CA 92626',
+              name: ['3333 Bear St', 'Space 231', 'Costa Mesa CA 92626'],
               url: 'http://www.test.com/'
             },
           ]
@@ -177,7 +176,6 @@ class FooterLinkList extends React.Component {
       ]
     }
     this.mapLinks = this.mapLinks.bind(this);
-    this.testRender = this.testRender.bind(this);
   }
 
   mapLinks() {
@@ -191,19 +189,11 @@ class FooterLinkList extends React.Component {
               category // temp styling
             }
             </strong>
-            <FooterLinks category={category} sublinks={sublinks} testRender={this.testRender} key={key} />
+            <FooterLinks column_id={column_id} category={category} sublinks={sublinks} key={key} />
           </div>
         )
       })
     }
-  }
-
-  testRender() {
-    return (
-      <div>
-        ***react test render***
-      </div>
-    )
   }
 
   render() {
