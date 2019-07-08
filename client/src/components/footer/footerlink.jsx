@@ -27,7 +27,7 @@ const FooterLinks = (props) => {
           if (!Array.isArray(name)) { // if nested 'name' is not an array (address)
             return (
               <li className="footer-link">
-                <a href={url}>{name}</a>
+                <a href={url} className="footer-link__title-link">{name}</a>
               </li>
             )
           } else { // is an array (address)

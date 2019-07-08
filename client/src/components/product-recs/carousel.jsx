@@ -36,7 +36,7 @@ class Carousel extends React.Component {
 // style="width:225px;height:247px"/
   renderImages() {
     return (
-      <ul className="panel" style={{ width: 3185 + 'px'}}>
+      <ul className="panel" style={{ width: 960 + 'px'}}>
         {
           this.state.images.map((image, i) => {
             console.log(`ImgData(${i}): ${image['url']}`)
