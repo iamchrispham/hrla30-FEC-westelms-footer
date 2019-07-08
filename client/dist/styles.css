@@ -6,6 +6,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
 }
 
+img {
+    border: none;
+    outline: none;
+}
+
 #productContainer .section-header {
     background-color: #000000;
 }
@@ -110,7 +115,7 @@ h3, .h3 {
 
 h4, .h4 {
     margin: 0 0 10px;
-    font-family: "GT-Eesti 4r",Arial,sans-serif;
+    font-family: "GT-Eesti 4r", Arial, sans-serif;
     font-weight: 400;
     font-size: 17.719px;
     font-style: italic;
@@ -134,7 +139,7 @@ h4, .h4 {
 
 #boiler-plate-desktop h2 {
     margin: 0 0 15px;
-    font-family: "GT-Eesti 3r",Arial,sans-serif;
+    font-family: "GT-Eesti 3r", Arial, sans-serif;
     font-weight: 300;
     font-size: 22.425px;
     line-height: 38px;
@@ -142,19 +147,19 @@ h4, .h4 {
     color: #050708;
     text-transform: lowercase;
     font-size: 36px;
-    font-family: "GT-Eesti 4r",Arial,sans-serif;
+    font-family: "GT-Eesti 4r", Arial, sans-serif;
     margin: 0;
 }
 
 #boiler-plate-desktop h3 {
-    font-family: "GT-Eesti 4r",Arial,sans-serif;
+    font-family: "GT-Eesti 4r", Arial, sans-serif;
     font-size: 23px;
     text-transform: lowercase;
     color: #050708;
 }
 
 #boiler-plate-desktop h4 {
-    font-family: "GT-Eesti 5r",Arial,sans-serif;
+    font-family: "GT-Eesti 5r", Arial, sans-serif;
     font-size: 19.934px;
     text-transform: lowercase;
     color: #050708;
@@ -166,7 +171,12 @@ h4, .h4 {
     justify-content: center;
     width: 100%;
 }
+
 #boiler-plate-desktop .container .col {
     margin: 0 50px;
     width: 240px;
+}
+
+#boiler-plate-desktop .container .col img {
+    width: 200px;
 }

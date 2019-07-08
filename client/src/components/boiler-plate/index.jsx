@@ -1,5 +1,7 @@
 import React from 'react';
 import Container from './container.jsx';
+
+
 const BoilerPlate = (props) => {
   return (
     <div className="boiler-plate-desktop" id="boiler-plate-desktop">
