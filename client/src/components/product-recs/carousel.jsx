@@ -36,7 +36,7 @@ class Carousel extends React.Component {
 // style="width:225px;height:247px"/
   renderImages() {
     return (
-      <ul className="scroller">
+      <ul className="panel" style={{ width: 3185 + 'px'}}>
         {
           this.state.images.map((image, i) => {
             console.log(`ImgData(${i}): ${image['url']}`)
@@ -53,7 +53,7 @@ class Carousel extends React.Component {
 
   render() {
     return (
-      <div className="carousel-cp" id="carousel-cp">
+      <div className="scroller-cp" id="scroller-cp">
         { this.state.images ? this.renderImages() : null}
     </div>
 
