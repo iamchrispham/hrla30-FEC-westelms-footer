@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FooterLinks = (props) => {
-  console.log('FooterLinks(props):', props);
+  // console.log('FooterLinks(props):', props);
   if (props.sublinks.length === 0) { // if we've reached the furthest right of the footer
     return (
       <div>
@@ -11,6 +11,9 @@ const FooterLinks = (props) => {
             Implement signup component here
             We can hella nest divs!
             */}
+            {/* <p>*SIGNUP COMPONENT FORM*</p>
+            <p>*PLAUSIBLE SVG COMPONENT*</p>
+            <p>*SOCIAL MEDIA CSS ICONS*</p> */}
           </div>
         </div>
       </div>
