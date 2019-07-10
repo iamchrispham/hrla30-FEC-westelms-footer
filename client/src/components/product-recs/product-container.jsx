@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel from './carousel.jsx';
+import Carousel from './carousel/carousel.jsx';
 import SectionHeader from './section-header.jsx';
 
 // ProductContainer both parent of section-header and carousel 

@@ -1,3 +1,4 @@
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -179,4 +180,84 @@ h4, .h4 {
 
 #boiler-plate-desktop .container .col img {
     width: 200px;
+}
+
+section {
+    display: block;
+    padding-left: 20px;
+}
+
+#related-queries {
+    width: 960px;
+    /* padding-bottom: 290px; */
+    clear: both;
+    margin-top: 50px;
+}
+
+/* Related Products - More Products Widget */
+
+#br-more-products-widget {
+    padding-bottom: 20px;
+    width: 720px !important;
+    margin-right: 0;
+    position: relative;
+    float: right;
+    height: 500px;
+}
+
+.br-related-heading, .br-more-heading {
+    font-family: "GT-Eesti 5r", Arial, sans-serif;
+    font-size: 17.7px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    color: #050708;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+#br-more-products-widget .br-more-widget {
+    float: left;
+    width: 220px;
+    padding: 0;
+    height: auto !important;
+    margin: 0 20px 0 0;
+}
+
+.br-more-widget-popup {
+    float: left;
+    width: 108px;
+    padding: 5px 10px 10px;
+    position: relative;
+}
+
+.hide, .hidden {
+    display: none;
+}
+
+/* Searches */
+
+#br-related-searches-widget {
+    padding-bottom: 15px;
+    width: 220px;
+    float: left;
+    clear: both;
+    margin-left: 0;
+}
+
+#br-related-searches-widget .br-related-searches li a {
+    padding-bottom: 1px;
+    border-bottom: 1px solid #866347;
+    color: #866347;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Scroller CSS */
+.carousel-container {
+    margin-bottom: 80px;
+}
+
+.scroller-container {
+    width: 100%;
 }
