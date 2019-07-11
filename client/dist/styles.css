@@ -35,6 +35,7 @@ img {
     width: 960px;
     padding: 0;
     clear: both;
+    
 }
 
 .product-Container .products {
@@ -44,7 +45,25 @@ img {
 
 .product-Container .sectionHeader {
     display: flex;
+    position: relative;
     justify-content: space-between;
+    align-items: baseline;
+}
+
+.product-Container .sectionHeader a {
+    float: right;
+    font: normal 11px "GT-Eesti 3r", Arial, sans-serif;
+    margin-top: 7px;
+    margin-right: 20px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #866347;
+    color: #866347;
+    text-decoration: none;
+    cursor: pointer;
+}
+.product-Container .sectionHeader a:hover, .product-Container .sectionHeader a:focus {
+    color: #023a51;
+    border-color: #023a51;
 }
 
 .product-Container .sectionHeader h2 {
