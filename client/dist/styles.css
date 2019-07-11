@@ -6,6 +6,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
 }
 
+body {
+    overflow-anchor: none;
+    font-family: "GT-Eesti 3r", Arial, sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+    color: #363636;
+    min-width: 960px;
+}
+
 img {
     border: none;
     outline: none;
@@ -21,7 +30,7 @@ img {
 /* PRODUCTS CONTAINER */
 
 .product-Container {
-    background: #ebdbff;
+    /* background: #ebdbff; */
     margin: 0 auto;
     width: 960px;
     padding: 0;
@@ -62,16 +71,38 @@ img {
 
 .swiper-container {
     width: 100%;
-  }
+}
 
 .swiper-slide {
     max-height: 20rem;
     display: flex;
     align-items: center;
-    color: #fff;
     justify-content: center;
-    font-size: 1.5rem;
-  }
+}
+
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+    opacity: 0;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    background-image: url(https://storage.cloud.google.com/afucktonofchairs/right-arrow.svg);
+    left: 0px;
+    right: auto;
+    transform: rotate(180deg);
+    width: 37px;
+    height: 60px;
+    background-size: 37px 60px;
+}
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    background-image: url(https://storage.cloud.google.com/afucktonofchairs/right-arrow.svg);
+    right: 0px;
+    left: auto;
+    width: 37px;
+    height: 60px;
+    background-size: 37px 60px;
+}
+
 /* Footer CSS */
 
 #footer-container {

@@ -6,7 +6,6 @@ import SectionHeader from './section-header.jsx';
   const ProductContainer = (props) => ( // reminder: use ES6 syntax for stateless components
       <section className="product-Container" id="product-Container">
         <div className="products">
-        This is a product container div
         <SectionHeader />
         <Carousel />
         </div>
