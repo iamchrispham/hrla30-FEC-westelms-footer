@@ -1,6 +1,9 @@
 import React from 'react';
+import {render} from 'react-dom';
+import Swiper from "react-id-swiper";
 import axios from 'axios';
-import Scroller from './scroller.jsx';
+// import Scroller from './scroller.jsx';
+import CarouselItem from './carouselItem.jsx';
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -9,27 +12,15 @@ class Carousel extends React.Component {
       images: []
     }
     this.getAllImagesAPI = this.getAllImagesAPI.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.renderScroller = this.renderScroller.bind(this);
+    this.renderCarousel = this.renderCarousel.bind(this);
   }
 
   componentDidMount() {
     console.log('Carousel component mounting...');
     this.getAllImagesAPI();
+    
   }
 
-  handleClick(e, data) {
-    let selectedImg = e.target.src;
-    let el = e.target;
-    let imgs = document.getElementsByClassName('carousel-image-selected');
-    if (!imgs.length !== 0) {
-      imgs[0].className = 'carousel-image';
-      el.className = 'carousel-image-selected';
-    } else {
-      el.className = 'carousel-image-selected';
-    }
-    console.log('clicked Image:', selectedImg);
-  }
 
   getAllImagesAPI() {
     axios.get('/products-cp/')
@@ -37,31 +28,50 @@ class Carousel extends React.Component {
         // var { data } = resp;
         this.setState({
           images: data
-        }, () => console.log('New Image Data', this.state.images))
-
+        }, () => render(this.renderCarousel(), document.getElementById('carousel-container')))
       })
       .catch((err) => {
         console.log('Error grabbing images.', err);
       })
   }
 
-
-  renderScroller() {
-    return (
-      <div className="scroller-container">
-        <Scroller handleClick={this.handleClick} images={this.state.images} />
-      </div>
+  renderCarousel() {
+    console.log('Attempting to render Carousel...');
+    const params = {
+      spaceBetween: 20, // 20px
+      initialSlide: 0,
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      pagination: {
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    }
+    return ( 
+      <Swiper {...params}>
+      {
+        this.state.images.map((image, key) => {
+          return (
+            <CarouselItem image={image} key={`img_${key}`} idx={key} />
+          )
+        }
+        )
+      }
+    </Swiper>
     )
   }
 
-  render() { // class component renderer
+  render() { 
+
     return (
-      <div className="carousel-container">
-        {this.state.images ? this.renderScroller() : null}
+      <div className="carousel-container" id="carousel-container">
       </div>
     )
   }
 }
 
-
+// style={{ width: 225 + 'px', height: 247 + 'px' }}
 export default Carousel;
