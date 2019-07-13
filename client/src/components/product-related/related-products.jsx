@@ -1,10 +1,11 @@
 import React from 'react';
 
 const RelatedProducts = (props) =>
-  <div id={`br${props.key}`} className={`br-more-widget ${props.key}`} style={{ display: 'block' }}>
-    {/* <a href={props.url}><img src={props.imgURL} /></a> */}
-    <a href={props.url}>{props.name}</a>
+  <li id={`br`} className={`br-more-widget `} >
+    <a href={props.url}><img src={props.imgURL} />
+    {props.name}
     <p>{props.desc}</p>
-  </div>
+    </a>
+  </li>
 
 export default RelatedProducts;

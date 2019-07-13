@@ -37,7 +37,7 @@ class RelatedContainer extends React.Component {
       },
       {
         name: 'Janie Slipper Chair',
-        imgURL: 'https://www.westelm.com/products/janie-slipper-chair-h3986/',
+        imgURL: 'https://www.westelm.com/weimgs/ab/images/wcm/products/201923/0014/janie-slipper-chair-m.jpg',
         url: '',
         desc: ''
       }
@@ -107,18 +107,20 @@ class RelatedContainer extends React.Component {
   mapDataProducts() { // unfinished
     console.log('MDP invoked');
     return (
-      <div id="more-products-widget" style={{ height: 355 + 'px' }}>
-        <div id="br-more-results-widget" style={{ height: 725 + 'px' }}>
+      <div id="more-products-widget">
+        <div id="br-more-results-widget" >
           <div className="br-more-heading">
             Related Products
             </div>
-          {this.state.products.map((product, i) => {
-            var { name, imgURL, url, desc } = product;
-            return (
-              <RelatedProducts name={name} imgURL={imgURL} url={url} desc={desc} key={i} />
-            )
-          })
-          }
+          <ul className="panel">
+            {this.state.products.map((product, i) => {
+              var { name, imgURL, url, desc } = product;
+              return (
+                <RelatedProducts name={name} imgURL={imgURL} url={url} desc={desc} key={i} />
+              )
+            })
+            }
+          </ul>
         </div>
       </div>
     )
@@ -131,7 +133,6 @@ class RelatedContainer extends React.Component {
         <div className="custombox-side" id="custombox-side">
           {this.state.searches ? this.mapDataSearches() : null}
           {this.state.products ? this.mapDataProducts() : null}
-          <span className="custombox-bottom"></span>
         </div>
       </section>
     )
