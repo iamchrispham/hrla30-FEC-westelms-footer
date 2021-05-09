@@ -29,7 +29,7 @@
     "cli": "^1.0.1",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "express": "^4.17.1",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.21",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.1",
     "webpack": "^4.20.0",
